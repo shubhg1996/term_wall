@@ -9,7 +9,9 @@ Terminology, Tilix or ITerm on MacOS
 3. `ln -s main.py ~/bin/twall`
 
 ## Usage:
-twall "part of filename"
+1. Place images in "Data" directrory with name containing the searchword. Example: "pikachu_ash_charmander.png"
++ `twall pikachu`   *loads a random image with pikachu in it*
++ `twall random`    *loads a random image*
 
 ## Sample:
 ![alt text](https://github.com/shubhg1996/term_wall/blob/master/sample.png)
