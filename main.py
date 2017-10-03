@@ -4,7 +4,7 @@
 import os, random
 import sys
 import time
-
+import glob
 import scripter
 
 def main(argv=sys.argv):
@@ -14,11 +14,9 @@ def main(argv=sys.argv):
         return
     if argv[1]=="random":
         print('choosing random wallpaper')
-        fpath = "/home/shubh/Documents/term_wall/Data/"+random.choice(os.listdir("/home/shubh/Documents/term_wall/Data/"))
-    elif os.path.exists("/home/shubh/Documents/term_wall/Data/"+argv[1]+".jpg"):
-        fpath = "/home/shubh/Documents/term_wall/Data/"+argv[1]+".jpg"
+        fpath = random.choice(glob.glob("/home/shubh/Documents/term_wall/Data/*"))
     elif os.path.exists("/home/shubh/Documents/term_wall/Data/"+argv[1]+".png"):
-        fpath = "/home/shubh/Documents/term_wall/Data/"+argv[1]+".png"
+        fpath = random.choice(glob.glob("/home/shubh/Documents/term_wall/Data/"+argv[1]+"*"))
     else:
         print("no such background exists")
         fpath = "/home/shubh/Documents/term_wall/Data/black.jpg"
