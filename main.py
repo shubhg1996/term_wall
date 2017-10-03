@@ -15,8 +15,8 @@ def main(argv=sys.argv):
     if argv[1]=="random":
         print('choosing random wallpaper')
         fpath = random.choice(glob.glob("/home/shubh/Documents/term_wall/Data/*"))
-    elif os.path.exists("/home/shubh/Documents/term_wall/Data/"+argv[1]+".png"):
-        fpath = random.choice(glob.glob("/home/shubh/Documents/term_wall/Data/"+argv[1]+"*"))
+    elif len(glob.glob("/home/shubh/Documents/term_wall/Data/*"+argv[1]+"*"))>0:
+        fpath = random.choice(glob.glob("/home/shubh/Documents/term_wall/Data/*"+argv[1]+"*"))
     else:
         print("no such background exists")
         fpath = "/home/shubh/Documents/term_wall/Data/black.jpg"
