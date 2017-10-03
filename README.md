@@ -9,5 +9,5 @@ chmod a+x main.py
 ln -s main.py ~/bin/twall
 
 Usage:
-twall <part of filename>
-[[https://github.com/shubhg1996/term_wall/blob/master/sample.png|alt=octocat]]
+twall "part of filename"
+![alt text](https://github.com/shubhg1996/term_wall/blob/master/sample.png)
