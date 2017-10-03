@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """The main module that brings everything together."""
-import os
+import os, random
 import sys
 import time
 
@@ -12,7 +12,10 @@ def main(argv=sys.argv):
     if len(argv) == 1:
         print('No command line arguments specified.')
         return
-    if os.path.exists("/home/shubh/Documents/term_wall/Data/"+argv[1]+".jpg"):
+    if argv[1]=="random":
+        print('choosing random wallpaper')
+        fpath = "/home/shubh/Documents/term_wall/Data/"+random.choice(os.listdir("/home/shubh/Documents/term_wall/Data/"))
+    elif os.path.exists("/home/shubh/Documents/term_wall/Data/"+argv[1]+".jpg"):
         fpath = "/home/shubh/Documents/term_wall/Data/"+argv[1]+".jpg"
     elif os.path.exists("/home/shubh/Documents/term_wall/Data/"+argv[1]+".png"):
         fpath = "/home/shubh/Documents/term_wall/Data/"+argv[1]+".png"
